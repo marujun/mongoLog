@@ -9,7 +9,7 @@ var DataProvider = require('./DataProvider.js').DataProvider,
     util = require('util');
 
 var mongoLogProvider = function() {
-    console.log("new pagesProvider");
+    console.log("newmongoLogProvider");
     this.collectionName = "mongoLog";
 };
 
