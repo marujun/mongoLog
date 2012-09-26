@@ -9,8 +9,8 @@ var DataProvider = require('./DataProvider.js').DataProvider,
     util = require('util');
 
 var mongoLogProvider = function() {
-    console.log("newmongoLogProvider");
-    this.collectionName = "mongoLog";
+    console.log("new  mongoLogProvider");
+    this.collectionName = "mongoLogs";
 };
 
 util.inherits(mongoLogProvider, DataProvider);
