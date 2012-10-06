@@ -7,9 +7,17 @@
  */
 var MongoLogProvider=require('../config/mongoLogProvider.js').mongoLogProvider;
 var mongoLogProvider=new MongoLogProvider;
-while(true){
+function a(){
   mongoLogProvider.insert({file:'apk'},{},function(err,result){
       if(err){console.log('err:',err);}
-//      console.log(result);
+      console.log(result);
+      setTimeout(function (){a();},500);
   });
-};
+}
+a();
+//sudo ps aux|grep mongod
+
+// sudo kill -9
+
+//db.mongoLogs.find()
+//db.mongoLogs.drop()

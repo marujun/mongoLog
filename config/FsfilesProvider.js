@@ -4,7 +4,7 @@ var DataProvider = require('./DataProvider.js').DataProvider,
 var FsfilesProvider = function() {
     console.log("new FsfilesProvider");
     this.collectionName = "fs.files";
-}
+};
 
 util.inherits(FsfilesProvider, DataProvider);
 
