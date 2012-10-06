@@ -34,4 +34,5 @@ function searchTxt(){
     });
 }
 
+//正则表达式参考：http://deerchao.net/tutorials/regex/regex.htm
 //db.articles.find()
