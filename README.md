@@ -1,3 +1,5 @@
+使用mongodb和coreseek进行全文搜索
+
 Mac OS下安装coreseek
 参考：http://www.coreseek.cn/products-install/install_on_macosx/
 
