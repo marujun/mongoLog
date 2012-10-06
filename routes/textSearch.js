@@ -28,7 +28,7 @@ function searchTxt(){
     articlesProvider.find(searchContent,{},function(err,result){
         if(err){console.log('search err:',err);}
         console.log("the search result is :");
-        result.forEach(function (data,index){
+        result.forEach(function (data,index){//依次输出查询结果
             console.log((index+1)+" : "+data.text);
         });
     });
