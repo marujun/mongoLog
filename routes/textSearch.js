@@ -3,12 +3,14 @@ var articlesProvider=new ArticlesProvider;
 var textOne = {
     title: "Apollo",
     text: "Some text about Apollo moon landings",
-    tags: [ "月亮", "apollo阿波罗号", "航天","text"]
+    tags: [ "moon", "apollo阿波罗号", "航天","text"]
 };
+var str="this is a test text.";
+var tmp = str.split(/\s+|\.+|,+/);//用逗号，空格，句号分隔开
 var textTwo={
     title: "full text search",
-    text : "this is a test text ." ,
-    tags : [ "this" , "is" , "a","test","text" ]
+    text : str ,
+    tags : tmp
 };
 var searchContent={ tags:"text"};
 //insertTxt();
