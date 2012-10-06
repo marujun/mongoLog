@@ -2,6 +2,7 @@ Mac OS下安装coreseek
 参考：http://www.coreseek.cn/products-install/install_on_macosx/
 
 设置环境，升级/安装系统基础依赖包：m4、autoconf、automake、libtool
+  
     sudo bash
 
     #设置路径和中文环境：
@@ -38,7 +39,7 @@ Mac OS下安装coreseek
     cd ..
 
 安装coreseek：
-    ##下载coreseek：coreseek 3.2.14：点击下载、coreseek 4.0.1：点击下载、coreseek 4.1：点击下载
+    ##下载coreseek:(3.2.14为稳定版不是最新版)
         curl -O -L http://www.coreseek.cn/uploads/csft/3.2/coreseek-3.2.14.tar.gz
         tar xzvf coreseek-3.2.14.tar.gz
         cd coreseek-3.2.14
