@@ -39,7 +39,8 @@ Mac OS下安装coreseek
     cd ..
 
 安装coreseek：
-    ##下载coreseek:(3.2.14为稳定版不是最新版)
+
+    ##下载coreseek(3.2.14为稳定版不是最新版):
         curl -O -L http://www.coreseek.cn/uploads/csft/3.2/coreseek-3.2.14.tar.gz
         tar xzvf coreseek-3.2.14.tar.gz
         cd coreseek-3.2.14
