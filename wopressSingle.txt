@@ -32,6 +32,6 @@
     border-radius: 4px 4px 4px 4px;
     padding:2px;
 }
-#copyright .neirong{margin-left:100px;margin-top:-100px;margin-bottom:1px;}
+#copyright .neirong{margin-left:100px;margin-top:-90px;margin-bottom:1px;}
 #copyright p {margin:5px 0;line-height:20px;}
 
