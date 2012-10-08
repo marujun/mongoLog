@@ -7,7 +7,7 @@
                                    <?php echo "作者 : $authordata->display_name";?></a></p>
                                    <p><?php echo "简介 : "; the_author_description(FALSE, FALSE, TRUE, FALSE); ?></p>
                                    <p>回到博客首页:
-                                       <a title="回到博客首页" href='http://124.207.0.21/wordpress/' target='_blank'>witmob</a> | 所属分类：<?php t$
+                                       <a title="回到博客首页" href='http://124.207.0.21/wordpress/' target='_blank'>witmob</a> | 所属分类：<?php the_category(', '); ?>
                                    </p>
                                 </div>
                              </div>
@@ -34,3 +34,4 @@
 }
 #copyright .neirong{margin-left:100px;margin-top:-100px;margin-bottom:1px;}
 #copyright p {margin:5px 0;line-height:20px;}
+
