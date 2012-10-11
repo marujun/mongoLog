@@ -5,7 +5,7 @@ var SphinxClient = require ("sphinxapi"),
 
 var cl = new SphinxClient();
 cl.SetServer('localhost', 9312);
-cl.Query('server', function(err, result) {
+cl.Query('Bonus', function(err, result) {
     assert.ifError(err);
     console.log(util.inspect(result, false, null, true));
 });

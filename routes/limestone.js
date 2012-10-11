@@ -10,13 +10,13 @@ limestone.connect(9312, // port. 9312 is standard Sphinx port. also 'host:port' 
         }
         sys.puts('Connected, sending query');
         limestone.query(
-            {'query':'server', maxmatches:1},
+            {'query':'Bonus', maxmatches:1},
             function(err, answer) {
                 limestone.disconnect();
                 console.log(answer);
-//                sys.puts("Extended search for 'test' yielded " +
-//                    answer.match_count + " results: " +
-//                    JSON.stringify(answer));
+                sys.puts("Extended search for 'test' yielded " +
+                    answer.match_count + " results: " +
+                    JSON.stringify(answer));
             }
         );
     }

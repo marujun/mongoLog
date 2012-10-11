@@ -12,8 +12,8 @@ var util = require('util'),
 //    });
 //});
 
-//indexer(function (){console.log("-------------建立所有索引完成！-----------------")});
-search("Sphinx",function(){console.log("------------查询完成！---------------");});
+indexer(function (){console.log("-------------建立所有索引完成！-----------------")});
+//search("Sphinx",function(){console.log("------------查询完成！---------------");});
 
 //mmseg("delta", function () {
 //    console.log("------------分词完成！---------------");
