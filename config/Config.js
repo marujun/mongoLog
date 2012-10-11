@@ -18,6 +18,7 @@ var sourcePath=__dirname+"/../public/",//资源路径
 global.indexer = sphinxPath+"indexer";
 global.search = sphinxPath +"search";
 
+//一些命令行命令
 //sudo indexer --merge main delta --rotate -c /Users/mrj/WebStormProject/demo/mongo/config/../public/coreseekPack/etc/csft.conf
 //sudo searchd -c /Users/mrj/WebStormProject/demo/mongo/config/../public/coreseekPack/etc/csft.conf
 //sudo searchd --stop -c /Users/mrj/WebStormProject/demo/mongo/config/../public/coreseekPack/etc/csft.conf

@@ -25,22 +25,24 @@ console.log(data);
 var queryWord="queueing s";
 var cl = new SphinxClient();
 cl.SetServer('localhost', 9312);
-cl.SetMatchMode(1);
+cl.SetMatchMode(1);//设置匹配模式从0开始
+// [SphinxClient.SPH_MATCH_ALL, SphinxClient.SPH_MATCH_ANY, SphinxClient.SPH_MATCH_PHRASE, SphinxClient.SPH_MATCH_BOOLEAN, SphinxClient.SPH_MATCH_EXTENDED, SphinxClient.SPH_MATCH_FULLSCAN, SphinxClient.SPH_MATCH_EXTENDED2]
+//http://www.coreseek.cn/docs/coreseek_4.1-sphinx_2.0.1-beta.html#api-funcgroup-fulltext-query-settings
 cl.Query(queryWord, function(err, result) {
     assert.ifError(err);
     console.log(util.inspect(result, false, null, true));
     if(result.matches[0]){
-        findOne(result.matches[0].id,function (results){
+        findOne(result.matches[0].id,function (results){ //按照匹配出的结果id到数据库中查找
             console.log("result : ",results);
             console.log("偏移量: "+results.content.indexOf(result.words[0].word));
         });
     }else{console.log("未找到匹配的！");}
 });
 
-insert(article1);
+insert(article1);//数据插入数据库
 insert(article2);
 
-writeXml(template,data,function (data){
+writeXml(template,data,function (data){   //生成xml文件
     console.log("写入xml文件: "+"\n",data);
     indexer(function (){
         console.log("-------------建立所有索引完成！-----------------");
