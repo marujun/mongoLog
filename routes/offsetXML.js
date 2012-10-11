@@ -67,7 +67,7 @@ function findOne(data,callback){
 function writeXml(template,data,callback){
     var tmp='';
     for(var i=0;i<data.length;i++){
-        tmp+='        <sphinx:document id="'+data[i]._id+'">'+''+"\n"
+        tmp+='        <sphinx:document id="'+data[i].id+'">'+''+"\n"
             +'            <subject>'+data[i].subject+'</subject>'+''+"\n"
             +'            <published>'+data[i].published+'</published>'+''+"\n"
             +'            <content>'+data[i].content+'</content>'+''+"\n"

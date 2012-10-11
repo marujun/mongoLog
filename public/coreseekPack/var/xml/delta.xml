@@ -6,7 +6,7 @@
             <sphinx:attr name="published" type="timestamp"/>
             <sphinx:attr name="author_id" type="int" bits="16" default="1"/>
       </sphinx:schema>
-        <sphinx:document id="5076bdc02d10f70000000001">
+        <sphinx:document id="23">
             <subject>net.createServer</subject>
             <published>1270131607</published>
             <content>Limestone is queueing now: 
@@ -15,7 +15,7 @@ build_excerpts methods outside the scope of the callback functions, provided the
 Limestone will enqueue the sphinx commands and run them sequentially.</content>
             <author_id>1</author_id>
         </sphinx:document>
-        <sphinx:document id="5076bdc02d10f70000000002">
+        <sphinx:document id="24">
             <subject>Bonus</subject>
             <published>1270131607</published>
             <content>bonus: persistent connection: 
