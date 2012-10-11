@@ -17,16 +17,18 @@ var template='      <sphinx:schema>'+"\n"
     +'            <sphinx:attr name="published" type="timestamp"/>'+"\n"
     +'            <sphinx:attr name="author_id" type="int" bits="16" default="1"/>'+"\n"
     +'      </sphinx:schema>'+"\n";
-var data=new Array;
-data.push(article1);
-data.push(article2);
+var data=[article1,article2];
+//data.push(article1);
+//data.push(article2);
+console.log(data);
 
-var queryWord="queueing";
+var queryWord="queueing s";
 var cl = new SphinxClient();
 cl.SetServer('localhost', 9312);
+cl.SetMatchMode(1);
 cl.Query(queryWord, function(err, result) {
     assert.ifError(err);
-//    console.log(util.inspect(result, false, null, true));
+    console.log(util.inspect(result, false, null, true));
     if(result.matches[0]){
         findOne(result.matches[0].id,function (results){
             console.log("result : ",results);
@@ -35,16 +37,16 @@ cl.Query(queryWord, function(err, result) {
     }else{console.log("未找到匹配的！");}
 });
 
-//insert(article1);
-//insert(article2);
-//
-//writeXml(template,data,function (data){
-//    console.log("写入xml文件: "+"\n",data);
-//    indexer(function (){
-//        console.log("-------------建立所有索引完成！-----------------");
-//        merge(function () {console.log("-------------合并索引完成！-----------------");});
-//    });
-//});
+insert(article1);
+insert(article2);
+
+writeXml(template,data,function (data){
+    console.log("写入xml文件: "+"\n",data);
+    indexer(function (){
+        console.log("-------------建立所有索引完成！-----------------");
+        merge(function () {console.log("-------------合并索引完成！-----------------");});
+    });
+});
 function insert(data){
     mongoLogProvider.insert(data,{},function(err,result){
         if(err){console.log('err:',err);}
@@ -65,7 +67,7 @@ function findOne(data,callback){
 function writeXml(template,data,callback){
     var tmp='';
     for(var i=0;i<data.length;i++){
-        tmp+='        <sphinx:document id="'+data[i].id+'">'+''+"\n"
+        tmp+='        <sphinx:document id="'+data[i]._id+'">'+''+"\n"
             +'            <subject>'+data[i].subject+'</subject>'+''+"\n"
             +'            <published>'+data[i].published+'</published>'+''+"\n"
             +'            <content>'+data[i].content+'</content>'+''+"\n"
