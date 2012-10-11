@@ -7,36 +7,23 @@
         <sphinx:attr name="author_id" type="int" bits="16" default="1"/>
     </sphinx:schema>
     <sphinx:document id="7">
-        <subject>什么是Sphinx/Coreseek</subject>
+        <subject>Data types</subject>
         <published>1270131607</published>
-        <content>Sphinx是一个在GPLv2下分发的全文检索引擎；Coreseek 是一个可供企业使用的、基于Sphinx（可独立于Sphinx原始版本运行）的中文全文检索引擎，按照GPLv2协议发行，商业使用（例如, 嵌入到其他程序中）需要联系我们以获得商业授权。
-
-            一般而言，Sphinx是一个独立的全文搜索引擎；而Coreseek是一个支持中文的全文搜索引擎，意图为其他应用提供高速、低空间占用、高结果相关度的中文全文搜索能力。Sphinx/Coreseek可以非常容易的与SQL数据库和脚本语言集成。
-
-            当前系统内置MySQL和PostgreSQL 数据库数据源的支持，也支持从管道标准输入读取入特定格式的XML数据。通过修改源代码，用户可以自行增加新的数据源（例如：其他类型的DBMS的原生支持）。在最新的版本中，用户还可以使用Python脚本作为数据源来获取任何已知世界和未知世界的数据，这极大的扩展了数据源的来源。
-
-            搜索API支持PHP、Python、Perl、Rudy和Java，并且也可以用作MySQL存储引擎。搜索API非常简单，可以在若干个小时之内移植到新的语言上。
+        <content>
+            In particular, every document has a unique _id which can be almost any type,
+            and by default a 12-byte ObjectID is created.
+            ObjectIDs can be represented as 24-digit hexadecimal strings,
+            but you must convert the string back into an ObjectID before you can use it in the database. For example:
         </content>
         <author_id>7</author_id>
     </sphinx:document>
     <sphinx:document id="8">
-        <subject>历史</subject>
+        <subject>GitHub information</subject>
         <published>1270135548</published>
-        <content>Coreseek 的开发工作类似Sphinx（起始于2001年），可以上溯到2006年，当时我们试图为一个数据库驱动的网站寻找一个可接受的中文搜索的解决方案，但是当时没有任何方案能够完全而又直接的满足要求。事实上，主要是如下问题：
+        <content>
+            The source code is available at http://github.com/mongodb/node-mongodb-native. You can either clone the repository or download a tarball of the latest release.
 
-            搜索质量(例如：类似Google的有效的相关度算法)
-            单纯的统计学方法的效果非常糟糕，特别是在大量的短篇文档的集合上，例如：论坛、博客等等
-            搜索速度
-            特别是当搜索的短语包括“停止词”时，表现的尤其明显，例如："to be or not to be"
-            建立索引时，可控的磁盘和CPU消耗
-            在现有硬件的环境下，这一点的重要性要超过对索引构造速度的要求.
-            中文搜索的准确性和效率
-            因为众所周知的原因，只有准确的中文分词才能提高中文搜索的准确性，并大大降低计算量.
-            通过网络，我们了解到有无数的人存在类似的需求，尔后我们进行了不同途径的探索，尝试了不同的走法，经过了反复的实践，最终选择基于Sphinx、结合MMSeg，开发出Coreseek中文全文检索引擎，并按照GPLv2协议发行，以供企业和个人解决中文搜索问题。
-
-            年复一年，其他的解决方案有了很多改进，新的方案也不断涌现，但是，我们一致认为仍然没有一种解决方案足够的好，能让我们抛弃Sphinx将搜索平台迁移过去。
-
-            近年来，Sphinx/Coreseek的用户给了我们很多正面的反馈和建议，我们也不断改进和提高，并增加了Python数据源，将Sphinx/Coreseek的应用范围从已知世界扩展到未知世界，其应用场景也达到无限种可能；因此，显而易见的，Sphinx/Coreseek的开发过程将会继续（也许将持续到世界末日）。
+            Once you have the source you can test the driver by running
         </content>
         <author_id>8</author_id>
     </sphinx:document>
